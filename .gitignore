@@ -1,10 +1,2 @@
 /.web-server-pid
 
-/build/
-/phpunit.xml
-
-!/var/cache
-/var/cache/*
-!var/cache/.gitkeep
-!/var/logs
-/var/logs/*
