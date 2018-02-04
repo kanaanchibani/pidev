@@ -1,0 +1,82 @@
+
+
+<!--<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>!-->
+
+<html>
+<head>
+    {% block head %}
+
+        {% block meta %}
+            <meta charset="utf-8" />
+        {% endblock %}
+
+        <title>{% block title %}Espace Etudiant {% endblock %} </title>
+
+        {% block style %}
+        {% endblock %}
+
+        {% block script %}
+        {% endblock %}
+
+    {% endblock %}
+</head>
+
+
+{% block header %}
+    section header
+{% endblock %}
+
+<body>
+
+{% block section1 %}
+    section 1sdsd
+{% endblock %}
+
+
+
+{% block section2 %}
+    section 2
+
+{% endblock %}
+
+
+
+{% block section3 %}
+    section 3
+{% endblock %}
+
+
+
+{% block section4 %}
+    section 4
+{% endblock %}
+
+
+
+{% block section5 %}
+    section 5
+{% endblock %}
+
+
+
+
+</body>
+
+
+{% block footer %}
+    footer
+{% endblock %}
+
+
+</html>
