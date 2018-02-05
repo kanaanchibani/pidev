@@ -396,14 +396,13 @@ section p button img {
 }
 .about .grid i.fa {
     font-size: 50px;
-    color: #d0d0d0;
-    color: #FF9800;
     margin-bottom: 20px;
+    font-size: 49px !important; 
 }
-.about i.fa.fa-pencil, .services i.fa.fa-pencil {
+.about i.fa.fa-users .services i.fa.fa-users{
     color: #E91E63;
 }
-.about i.fa.fa-book, .services i.fa.fa-book {
+.about i.fa.fa-handshake, .services i.fa.fa-handshake {
     color: #2196F3;
 }
 .about i.fa.fa-flask, .services i.fa.fa-flask {
@@ -744,7 +743,7 @@ div#services {
   border-radius: 0 0 3px 3px;
 }
 .statsimg {
-    background: url(../images/stats.jpg) no-repeat 0px 0px;
+    background: url(../images/graduation.jpg) no-repeat 0px 0px;
     background-size: cover;
     min-height: 600px;
 }
@@ -1704,3 +1703,27 @@ iframe {
 	
 }
 /* //responsive design */
+.fa
+{
+        font-size: 46px !important;
+
+}
+.fa-users {
+
+    color: #5cacf1 !important
+}
+
+.fa-slideshare  {
+    color: orange !important;
+}
+
+
+.fa-exchange {
+    color: #ff0e70!important;
+}
+
+.fa-star {
+    color: #64c100!important;
+}
+
+
