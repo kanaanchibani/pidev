@@ -30,10 +30,14 @@ abstract class AbstractCache implements CacheInterface, LoggerAwareInterface
 
     private $defaultLifetime;
 
+    /**
+     * @param string $namespace
+     * @param int    $defaultLifetime
+     */
     protected function __construct($namespace = '', $defaultLifetime = 0)
     {
         $this->defaultLifetime = max(0, (int) $defaultLifetime);
-        $this->namespace = '' === $namespace ? '' : $this->getId($namespace).':';
+        $this->namespace = '' === $namespace ? '' : CacheItem::validateKey($namespace).':';
         if (null !== $this->maxIdLength && strlen($namespace) > $this->maxIdLength - 24) {
             throw new InvalidArgumentException(sprintf('Namespace must be %d chars max, %d given ("%s")', $this->maxIdLength - 24, strlen($namespace), $namespace));
         }

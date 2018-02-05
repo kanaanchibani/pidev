@@ -1,0 +1,20 @@
+{% extends ":default:test.html.twig" %}
+
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="big-div">
+     <h1>Liste events</h1>
+    </div>
+    Liste events
+    <p class="important">
+
+    </p>
+{% endblock %}
