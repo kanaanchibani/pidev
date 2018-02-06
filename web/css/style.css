@@ -757,9 +757,9 @@ div#services {
   border-radius: 0 0 3px 3px;
 }
 .statsimg {
-    background: url(../images/stats.jpg) no-repeat 0px 0px;
+    background: url(../images/bottom.jpg) no-repeat 0px 0px;
     background-size: cover;
-    min-height: 600px;
+    min-height: 900px;
 }
 .statsimg h3 {
     font-size: 40px;
