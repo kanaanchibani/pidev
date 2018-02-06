@@ -13,6 +13,4 @@
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 /.web-server-pid
-/build/
-*.xml
-*.xml
+
