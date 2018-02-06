@@ -17,4 +17,42 @@ class DefaultController extends AbstractController
         return $this->render('default/index.html.twig');
 
     }
+
+    public function testAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/parenttest.html.twig');
+
+    }
+
+
+    public function clubAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('version0/club.html.twig');
+
+    }
+
+
+    public function eventsAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('version0/events.html.twig');
+
+    }
+
+    public function spottedAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('version0/spotted.html.twig');
+
+    }
+
+    public function docsAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('version0/docs.html.twig');
+
+    }
+
 }

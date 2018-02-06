@@ -23,8 +23,6 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Twig\Environment;
 
 /**
- * ProfilerController.
- *
  * @author Fabien Potencier <fabien@symfony.com>
  */
 class ProfilerController
@@ -39,8 +37,6 @@ class ProfilerController
     private $baseDir;
 
     /**
-     * Constructor.
-     *
      * @param UrlGeneratorInterface        $generator       The URL Generator
      * @param Profiler                     $profiler        The profiler
      * @param Environment                  $twig            The twig environment
@@ -129,34 +125,6 @@ class ProfilerController
     }
 
     /**
-     * Displays information page.
-     *
-     * @param Request $request The current HTTP Request
-     * @param string  $about   The about message
-     *
-     * @return Response A Response instance
-     *
-     * @throws NotFoundHttpException
-     */
-    public function infoAction(Request $request, $about)
-    {
-        if (null === $this->profiler) {
-            throw new NotFoundHttpException('The profiler must be enabled.');
-        }
-
-        $this->profiler->disable();
-
-        if (null !== $this->cspHandler) {
-            $this->cspHandler->disableCsp();
-        }
-
-        return new Response($this->twig->render('@WebProfiler/Profiler/info.html.twig', array(
-            'about' => $about,
-            'request' => $request,
-        )), 200, array('Content-Type' => 'text/html'));
-    }
-
-    /**
      * Renders the Web Debug Toolbar.
      *
      * @param Request $request The current HTTP Request
@@ -214,8 +182,6 @@ class ProfilerController
 
     /**
      * Renders the profiler search bar.
-     *
-     * @param Request $request The current HTTP Request
      *
      * @return Response A Response instance
      *
@@ -321,8 +287,6 @@ class ProfilerController
     /**
      * Narrows the search bar.
      *
-     * @param Request $request The current HTTP Request
-     *
      * @return Response A Response instance
      *
      * @throws NotFoundHttpException
@@ -421,7 +385,7 @@ class ProfilerController
 
         $filename = $this->baseDir.DIRECTORY_SEPARATOR.$file;
 
-        if (preg_match("'(^|[/\\\\])\.\.?([/\\\\]|$)'", $file) || !is_readable($filename)) {
+        if (preg_match("'(^|[/\\\\])\.'", $file) || !is_readable($filename)) {
             throw new NotFoundHttpException(sprintf('The file "%s" cannot be opened.', $file));
         }
 

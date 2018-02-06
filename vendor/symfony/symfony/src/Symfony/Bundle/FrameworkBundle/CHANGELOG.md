@@ -14,7 +14,6 @@ CHANGELOG
    the same helpers as the `Controller` class, but does not allow accessing the dependency
    injection container, in order to encourage explicit dependency declarations.
  * Added support for the `controller.service_arguments` tag, for injecting services into controllers' actions
- * Deprecated `cache:clear` with warmup (always call it with `--no-warmup`)
  * Changed default configuration for
    assets/forms/validation/translation/serialization/csrf from `canBeEnabled()` to
    `canBeDisabled()` when Flex is used
@@ -71,7 +70,8 @@ CHANGELOG
  * Deprecated using core form types without dependencies as services
  * Added `Symfony\Component\HttpHernel\DataCollector\RequestDataCollector::onKernelResponse()`
  * Added `Symfony\Bundle\FrameworkBundle\DataCollector\RequestDataCollector`
- * Deprecated service `serializer.mapping.cache.apc` (use `serializer.mapping.cache.doctrine.apc` instead)
+ * The `framework.serializer.cache` option and the service `serializer.mapping.cache.apc` have been
+   deprecated. APCu should now be automatically used when available.
 
 3.0.0
 -----
